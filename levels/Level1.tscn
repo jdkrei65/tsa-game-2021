@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://images/duck.png" type="Texture" id=1]
+[ext_resource path="res://images/ground_test.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 15.0266
+height = 10.942
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 233, 18 )
+
+[node name="Level1" type="Node2D"]
+
+[node name="Duck" type="RigidBody2D" parent="."]
+position = Vector2( 171.785, 447.396 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Duck"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+hframes = 2
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Duck"]
+position = Vector2( -1.93246, 3.27032 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 275.611, 590.865 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -6, -49 )
+rotation = -0.0174533
+shape = SubResource( 2 )
