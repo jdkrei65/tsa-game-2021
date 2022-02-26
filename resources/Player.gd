@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 export var speed = 150
 export var gravity = 25
-export var jump_power = 500
+export var jump_power = 530
 var velocity = Vector2(0, 0)
 
 # Called when the node enters the scene tree for the first time.
@@ -13,8 +13,10 @@ func _ready():
 func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		velocity.x = speed
+		get_node("Sprite").set_flip_h(false)
 	if Input.is_action_pressed("move_left"):
 		velocity.x = -speed
+		get_node("Sprite").set_flip_h(true)
 		
 	velocity.y += gravity
 	
