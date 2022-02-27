@@ -6,6 +6,13 @@ export var gravity = 25
 export var jump_power = 530
 var velocity = Vector2(0, 0)
 
+onready var camera = get_node("Camera2D")
+onready var tilemap = get_node("../TileMap")
+
+const Tiles = {
+	CACTUS = 0
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -28,7 +35,12 @@ func _physics_process(delta):
 	velocity.x = lerp(velocity.x, 0, 0.1)
 	
 	if position.y > 600:
-		get_tree().change_scene("res://Main.tscn")
+		get_tree().change_scene("res://Death.tscn")
+	
+	var pos_on_map = tilemap.world_to_map(position*2)
+	var tile = tilemap.get_cellv(pos_on_map)
+	if tile == Tiles.CACTUS:
+		pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
