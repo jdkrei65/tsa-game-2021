@@ -17,6 +17,9 @@ func _process(delta):
 		get_tree().paused = true
 		
 func to_next_level():
+	if levelnum < 0:
+		get_tree().change_scene("res://Win.tscn")
+		
 	print("res://levels/Level" + str(levelnum + 1) + ".tscn")
 	get_tree().change_scene("res://levels/Level" + str(levelnum + 1) + ".tscn")
 
