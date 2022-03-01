@@ -8,9 +8,11 @@ var velocity = Vector2(0, 0)
 
 onready var camera = get_node("Camera2D")
 onready var tilemap = get_node("../TileMap")
+onready var levelnode = get_node("..")
 
 const Tiles = {
-	CACTUS = 0
+	CACTUS = 0,
+	FINISH = 13
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -39,8 +41,9 @@ func _physics_process(delta):
 	
 	var pos_on_map = tilemap.world_to_map(position*2)
 	var tile = tilemap.get_cellv(pos_on_map)
-	if tile == Tiles.CACTUS:
-		pass
+	if tile == Tiles.FINISH:
+		print("Finish")
+		levelnode.to_next_level()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
