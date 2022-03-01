@@ -2,5 +2,5 @@
 
 See the game at https://tsa-game-2021.vercel.app/
 
-It hasn't been updated in a while, there's not much there.
-You might need to force reload (ctrl+shift+r) if a change doesn't appear.
+You might need to force reload (ctrl+shift+r) if a change doesn't appear, or just wait a few minutes.
+Some changes (like image changes) won't appear until godot reimports them.
