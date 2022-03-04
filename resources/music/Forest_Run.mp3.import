@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Forest_Run.mp3-0226216cde5ebb1587acf5730d618478.mp3str"
+
+[deps]
+
+source_file="res://resources/music/Forest_Run.mp3"
+dest_files=[ "res://.import/Forest_Run.mp3-0226216cde5ebb1587acf5730d618478.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

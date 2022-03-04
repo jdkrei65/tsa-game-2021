@@ -13,7 +13,7 @@ onready var levelnode = get_node("..")
 const Tiles = {
 	CACTUS = 0,
 	SPIKES = 12,
-	FINISH = 13
+	FINISH = 14
 }
 
 # Called when the node enters the scene tree for the first time.

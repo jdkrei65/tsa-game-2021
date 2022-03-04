@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Worse_Forest_Run.mp3-052930058417b8bca78411942a02b844.mp3str"
+
+[deps]
+
+source_file="res://resources/music/Worse_Forest_Run.mp3"
+dest_files=[ "res://.import/Worse_Forest_Run.mp3-052930058417b8bca78411942a02b844.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
